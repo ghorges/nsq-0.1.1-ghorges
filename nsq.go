@@ -52,7 +52,7 @@ func main() {
 
 	// 开启四个协程。
 	// 分别是：获取 topic、获取 uuid、
-	// consumer 连接、消费者连接。
+	// consumer 连接、生产者连接。
 	go topicFactory(*memQueueSize)
 	go uuidFactory()
 	go tcpServer(*bindAddress, strconv.Itoa(*tcpPort))
